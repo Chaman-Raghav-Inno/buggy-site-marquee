@@ -1,0 +1,12 @@
+<h1>What's on</h1>
+<form id="ev-filters" class="filters card" novalidate role="search">
+  <div class="field grow"><label for="ev-q">Search</label><input id="ev-q" type="search" placeholder="Event, performer or venue"></div>
+  <div class="field"><label for="ev-category">Category</label><select id="ev-category"><option value="">All categories</option></select></div>
+  <div class="field"><label for="ev-city">City</label><select id="ev-city"><option value="">All cities</option></select></div>
+  <div class="field"><label for="ev-from">From</label><input id="ev-from" type="date"></div>
+  <div class="field"><label for="ev-to">To</label><input id="ev-to" type="date"></div>
+  <div class="field"><label for="ev-sort">Sort by</label><select id="ev-sort"><option value="date">Date: soonest first</option><option value="price">Price: lowest first</option></select></div>
+</form>
+<p id="ev-count" class="muted" role="status" aria-live="polite">Loading…</p>
+<div id="ev-list" class="event-grid"></div>
+<nav class="pager" aria-label="Pages"><button type="button" id="ev-prev" class="btn btn-ghost btn-small">Previous</button><span id="ev-page"></span><button type="button" id="ev-next" class="btn btn-ghost btn-small">Next</button></nav>

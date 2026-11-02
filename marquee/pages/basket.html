@@ -1,0 +1,22 @@
+<h1>Your basket</h1>
+<p id="loading" class="muted">Loading…</p>
+<p id="bk-empty" class="card" hidden>Your basket is empty. <a href="/events">Find an event</a>.</p>
+<div id="basket" class="grid-2" hidden>
+  <section class="card">
+    <h2 id="bk-event"></h2>
+    <p id="bk-when" class="muted"></p>
+    <ul class="basket-lines" id="bk-lines"></ul>
+    <p class="hint">Tickets are held for 10 minutes. When a hold runs out, those tickets go back on sale.</p>
+  </section>
+  <section class="card">
+    <h2>Summary</h2>
+    <dl class="totals" id="bk-totals"></dl>
+    <form id="code-form" class="row" novalidate>
+      <label for="bk-code" class="sr-only">Promo code</label>
+      <input id="bk-code" placeholder="Promo code" autocomplete="off">
+      <button type="submit" class="btn btn-ghost">Apply</button>
+    </form>
+    <p id="code-msg" class="msg" role="status"></p>
+    <div class="actions"><a class="btn btn-block" href="/checkout" id="bk-checkout">Checkout</a></div>
+  </section>
+</div>

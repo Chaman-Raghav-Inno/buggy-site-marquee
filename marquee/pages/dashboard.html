@@ -1,0 +1,15 @@
+<h1 id="db-title">Organiser dashboard</h1>
+<p id="loading" class="muted">Loading…</p>
+<div id="dashboard" hidden>
+  <div class="tiles">
+    <div class="tile"><p class="tile-label">Events you run</p><p class="tile-value" id="db-events">–</p></div>
+    <div class="tile"><p class="tile-label">Tickets sold (all channels)</p><p class="tile-value" id="db-sold">–</p></div>
+    <div class="tile"><p class="tile-label">Ticket revenue on Marquee</p><p class="tile-value" id="db-revenue">–</p><p class="tile-note">What fans paid for tickets, after promo codes, without booking fees</p></div>
+  </div>
+  <div class="table-wrap">
+    <table class="table" aria-label="Your events">
+      <thead><tr><th>Event</th><th>Date</th><th>Status</th><th class="num">Sold</th><th class="num">Released</th><th class="num">Venue capacity</th><th class="num">Revenue</th><th></th></tr></thead>
+      <tbody id="db-rows"></tbody>
+    </table>
+  </div>
+</div>

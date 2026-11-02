@@ -1,0 +1,62 @@
+<p><a href="/dashboard">← Dashboard</a></p>
+<p id="loading" class="muted">Loading…</p>
+<section id="mg-missing" class="card narrow" hidden><h1>Event not found</h1><p id="mg-missing-text">We couldn't find that event.</p><p><a href="/dashboard">Back to your events</a></p></section>
+<div id="manage" hidden>
+  <header class="section-head">
+    <div><h1 id="mg-name"></h1><p id="mg-when" class="muted"></p></div>
+    <span id="mg-status"></span>
+  </header>
+  <div class="tiles">
+    <div class="tile"><p class="tile-label">Sold (all channels)</p><p class="tile-value" id="mg-sold">–</p><p class="tile-note" id="mg-released"></p></div>
+    <div class="tile"><p class="tile-label">Venue capacity</p><p class="tile-value" id="mg-capacity">–</p></div>
+    <div class="tile"><p class="tile-label">Ticket revenue on Marquee</p><p class="tile-value" id="mg-revenue">–</p><p class="tile-note">After promo codes, without booking fees</p></div>
+    <div class="tile"><p class="tile-label">Waitlist</p><p class="tile-value" id="mg-waitlist">–</p></div>
+  </div>
+  <section class="section">
+    <h2>Sales by ticket type</h2>
+    <div class="table-wrap">
+      <table class="table" aria-label="Ticket types">
+        <thead><tr><th>Ticket type</th><th class="num">Released</th><th class="num">Sold</th><th class="num">Left</th><th>Price (€)</th></tr></thead>
+        <tbody id="mg-tiers"></tbody>
+      </table>
+    </div>
+    <p id="mg-price-msg" class="msg" role="status"></p>
+  </section>
+  <section class="section grid-2">
+    <form id="rl-form" class="card" novalidate>
+      <h2>Release more tickets</h2>
+      <p class="muted small">You can release more tickets up to the venue's capacity. People on the waitlist are offered them first.</p>
+      <div class="field-row">
+        <div class="field"><label for="rl-tier">Ticket type</label><select id="rl-tier"></select></div>
+        <div class="field"><label for="rl-qty">How many</label><input id="rl-qty" inputmode="numeric" autocomplete="off"></div>
+      </div>
+      <p id="rl-msg" class="msg" role="status"></p>
+      <button type="submit" class="btn">Release</button>
+    </form>
+    <section class="card" id="cx-card">
+      <h2>Cancel this event</h2>
+      <p class="muted small">Everyone who booked gets everything back automatically, booking and order fees included.</p>
+      <p id="cx-msg" class="msg" role="status"></p>
+      <button type="button" class="btn btn-danger" id="cx-open">Cancel event and refund everyone</button>
+    </section>
+  </section>
+  <section class="section">
+    <div class="section-head"><h2>Attendees</h2><a id="mg-csv" class="btn btn-ghost btn-small">Download CSV</a></div>
+    <div class="table-wrap">
+      <table class="table" aria-label="Attendees">
+        <thead><tr><th>Reference</th><th>Name</th><th>Email</th><th>Ticket</th><th>Seat</th><th>Status</th><th>Checked in</th></tr></thead>
+        <tbody id="mg-attendees"></tbody>
+      </table>
+    </div>
+  </section>
+</div>
+<dialog id="cx-dialog" aria-labelledby="cx-title">
+  <form method="dialog" novalidate>
+    <h2 id="cx-title">Cancel this event?</h2>
+    <p id="cx-text"></p>
+    <div class="dialog-actions">
+      <button type="button" class="btn btn-ghost" data-value="back">Keep it</button>
+      <button type="button" class="btn btn-danger" data-value="cancel">Cancel event</button>
+    </div>
+  </form>
+</dialog>

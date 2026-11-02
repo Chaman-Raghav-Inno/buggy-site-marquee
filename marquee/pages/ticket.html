@@ -1,0 +1,30 @@
+<p><a href="/tickets">← My tickets</a></p>
+<p id="loading" class="muted">Loading…</p>
+<section id="tk-missing" class="card narrow" hidden><h1>Ticket not found</h1><p>We couldn't find that ticket. <a href="/tickets">See your tickets</a>.</p></section>
+<div id="ticket" hidden>
+  <article class="card ticket-card">
+    <div><div id="tk-qr"></div><p class="ticket-code" id="tk-code"></p></div>
+    <div>
+      <p class="cat" id="tk-status"></p>
+      <h1 id="tk-name"></h1>
+      <dl class="facts" id="tk-facts"></dl>
+    </div>
+  </article>
+  <div class="grid-2 section" id="tk-actions">
+    <form id="tf-form" class="card" novalidate>
+      <h2>Send to a friend</h2>
+      <p class="muted small">Up to 2 days before the event. The ticket and its QR code move to your friend.</p>
+      <div class="field"><label for="tf-name">Friend's name</label><input id="tf-name" autocomplete="off"></div>
+      <div class="field"><label for="tf-email">Friend's email</label><input id="tf-email" type="email" autocomplete="off"></div>
+      <p id="tf-msg" class="msg" role="status"></p>
+      <button type="submit" class="btn">Send ticket</button>
+    </form>
+    <form id="rs-form" class="card" novalidate>
+      <h2>Resell on Marquee Resale</h2>
+      <p class="muted small" id="rs-cap"></p>
+      <div class="field"><label for="rs-price">Your price (€)</label><input id="rs-price" inputmode="decimal" autocomplete="off"></div>
+      <p id="rs-msg" class="msg" role="status"></p>
+      <div class="actions"><button type="submit" class="btn">List for resale</button><button type="button" class="btn btn-ghost" id="rs-unlist" hidden>Take off resale</button></div>
+    </form>
+  </div>
+</div>

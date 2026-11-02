@@ -1,0 +1,45 @@
+<p><a href="/events">← All events</a></p>
+<p id="loading" class="muted">Loading…</p>
+<div id="event" hidden>
+  <div class="event-head">
+    <section>
+      <p class="cat" id="ev-cat"></p>
+      <h1 id="ev-name"></h1>
+      <p id="ev-performer" class="muted"></p>
+      <div id="ev-badges" class="badges"></div>
+      <dl class="facts" id="ev-facts"></dl>
+      <p id="ev-about" class="section"></p>
+      <ul class="list small muted" id="ev-rules"></ul>
+    </section>
+    <section class="card" id="buy">
+      <h2>Tickets</h2>
+      <p id="buy-closed" hidden></p>
+      <form id="buy-form" novalidate hidden>
+        <div id="presale" class="notice" hidden>
+          <p id="presale-text"></p>
+          <div class="field"><label for="buy-presale">Presale code</label><input id="buy-presale" autocomplete="off"></div>
+        </div>
+        <div id="ga" hidden>
+          <fieldset><legend>Ticket type</legend><ul class="tier-list" id="tiers"></ul></fieldset>
+          <div class="field-row">
+            <div class="field"><label for="buy-qty">How many</label><select id="buy-qty"></select></div>
+            <div class="field" id="dob-field" hidden><label for="buy-dob">Holder's date of birth</label><input id="buy-dob" type="date"></div>
+          </div>
+        </div>
+        <div id="seated" hidden>
+          <ul class="legend" id="legend"></ul>
+          <label class="check"><input type="checkbox" id="buy-access"> I need a wheelchair space</label>
+          <div class="seatmap-wrap" id="seatmap" role="group" aria-label="Seat map"></div>
+          <p id="picked" class="muted">Choose your seats on the map.</p>
+        </div>
+        <p id="buy-msg" class="msg" role="status"></p>
+        <div class="actions"><button type="submit" class="btn" id="buy-btn">Add to basket</button><a id="buy-next" class="btn btn-ghost" href="/basket" hidden>Go to basket</a></div>
+      </form>
+      <div id="waitlist" hidden>
+        <p id="wl-text"></p>
+        <p id="wl-msg" class="msg" role="status"></p>
+        <button type="button" id="wl-join" class="btn">Join the waitlist</button>
+      </div>
+    </section>
+  </div>
+</div>
