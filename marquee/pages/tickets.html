@@ -1,0 +1,27 @@
+<h1>My tickets</h1>
+<p id="loading" class="muted">Loading…</p>
+<div id="tickets" hidden>
+  <section>
+    <h2>Coming up</h2>
+    <div class="order-list" id="tk-upcoming"></div>
+  </section>
+  <section class="section">
+    <h2>Waitlists</h2>
+    <ul class="list" id="tk-waitlist"></ul>
+  </section>
+  <section class="section">
+    <h2>Past and refunded</h2>
+    <div class="order-list" id="tk-past"></div>
+  </section>
+</div>
+<dialog id="rf-dialog" aria-labelledby="rf-title">
+  <form method="dialog" novalidate>
+    <h2 id="rf-title">Refund this booking?</h2>
+    <p id="rf-text"></p>
+    <p id="rf-reason" class="muted small"></p>
+    <div class="dialog-actions">
+      <button type="button" class="btn btn-ghost" data-value="back">Keep my tickets</button>
+      <button type="button" class="btn btn-danger" data-value="refund" id="rf-confirm">Refund</button>
+    </div>
+  </form>
+</dialog>

@@ -1,0 +1,24 @@
+<h1>Checkout</h1>
+<p id="loading" class="muted">Loading…</p>
+<p id="co-empty" class="card" hidden>Your basket is empty. <a href="/events">Find an event</a>.</p>
+<div id="checkout" class="grid-2" hidden>
+  <section class="card">
+    <h2 id="co-event"></h2>
+    <p id="co-when" class="muted"></p>
+    <ul class="list" id="co-lines"></ul>
+    <dl class="totals" id="co-totals"></dl>
+  </section>
+  <form id="pay-form" class="card" novalidate>
+    <h2>Pay by card</h2>
+    <p class="notice small">Demo checkout: no real payment is taken. Use the test card <code>4242 4242 4242 4242</code>, any expiry date that hasn't passed and any 3-digit code.</p>
+    <div class="field"><label for="co-name">Name on card</label><input id="co-name" autocomplete="cc-name"></div>
+    <div class="field"><label for="co-card">Card number</label><input id="co-card" inputmode="numeric" autocomplete="cc-number" placeholder="1234 5678 9012 3456"></div>
+    <div class="field-row">
+      <div class="field"><label for="co-expiry">Expiry (MM/YY)</label><input id="co-expiry" inputmode="numeric" autocomplete="cc-exp" placeholder="MM/YY" maxlength="5"></div>
+      <div class="field"><label for="co-cvc">Security code</label><input id="co-cvc" inputmode="numeric" autocomplete="cc-csc" maxlength="4"></div>
+    </div>
+    <p id="co-msg" class="msg" role="alert"></p>
+    <button type="submit" class="btn btn-block" id="co-pay">Pay</button>
+  </form>
+</div>
+<section id="co-done" class="card narrow" hidden></section>

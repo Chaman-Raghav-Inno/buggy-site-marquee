@@ -1,0 +1,16 @@
+<h1>Check-in</h1>
+<p class="muted">Type or scan the reference on each ticket. Each ticket gets in once.</p>
+<p id="loading" class="muted">Loading…</p>
+<div id="checkin" class="grid-2" hidden>
+  <form id="ci-form" class="card" novalidate>
+    <div class="field"><label for="ci-event">Event</label><select id="ci-event"></select></div>
+    <div class="field"><label for="ci-code">Ticket reference</label><input id="ci-code" class="mono" autocomplete="off" placeholder="MQ-XXXXXX"></div>
+    <button type="submit" class="btn btn-block">Check in</button>
+    <p id="ci-msg" class="msg checkin-result" role="status"></p>
+  </form>
+  <section class="card">
+    <h2>Checked in so far</h2>
+    <p id="ci-count" class="big">0</p>
+    <ul class="list" id="ci-list"></ul>
+  </section>
+</div>

@@ -1,0 +1,17 @@
+[project]
+name = "buggy-site-marquee"
+version = "0.1.0"
+description = "Marquee: a demo event ticketing site with planted functional bugs, for testing the AI QA Scanner"
+requires-python = ">=3.11"
+dependencies = []
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
